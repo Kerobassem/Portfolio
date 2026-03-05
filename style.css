@@ -502,7 +502,7 @@ html[lang="ar"] .hero-role {
   text-shadow: 0 0 12px var(--accent);
 }
 .hero-word-wrap {
-  display: flex;
+  display: block;
   align-items: center;
 }
 .hero-word {
