@@ -11,7 +11,9 @@
   background-color: var(--particle-bg);
   transition: background-color 0.5s ease;
 }
-
+*{
+  -webkit-tap-highlight-color: transparent;
+}
 /* ===========================
    CSS VARIABLES — DARK (DEFAULT)
 =========================== */
