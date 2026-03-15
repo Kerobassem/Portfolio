@@ -11,9 +11,11 @@
   background-color: var(--particle-bg);
   transition: background-color 0.5s ease;
 }
+
 *{
   -webkit-tap-highlight-color: transparent;
 }
+
 /* ===========================
    CSS VARIABLES — DARK (DEFAULT)
 =========================== */
@@ -1001,12 +1003,6 @@ section.visible {
   justify-content: center;
 }
 
-.sgh-icon {
-  font-size: 20px;
-  font-weight: 900;
-  font-family: "Fira Code", "Courier New", monospace;
-}
-
 .tech-icon { color: #22d3ee; }   /* cyan */
 .soft-icon { color: #4ade80; }   /* green */
 
@@ -1015,6 +1011,15 @@ section.visible {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+
 
 .tech-label { color: #22d3ee; }
 .soft-label { color: #4ade80; }
@@ -1607,6 +1612,8 @@ body[dir="rtl"] .experience-achievements li::before {
   border: 1px solid var(--border-subtle);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 
 .achievement-card::before {
@@ -1618,6 +1625,167 @@ body[dir="rtl"] .experience-achievements li::before {
   height: 280px;
   background: radial-gradient(circle, rgba(44, 128, 255, 0.07), transparent);
   transition: var(--transition);
+}
+/* ================================================
+   TESTIMONIALS — COMING SOON STATE
+   Paste into style.css
+================================================ */
+
+.testi-soon-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testi-soon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--primary-glow), transparent 60%, var(--accent-glow));
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.testi-soon-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.testi-soon-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--primary-glow);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 28px;
+  color: var(--primary-light);
+  animation: testi-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes testi-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  50%       { box-shadow: 0 0 0 12px transparent; }
+}
+
+.testi-soon-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.testi-soon-sub {
+  font-size: 14.5px;
+  color: var(--text-lighter);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.testi-soon-stars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+body[dir="rtl"] .testi-soon-stars {
+  text-align: right;
+}
+
+.testi-soon-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.testi-soon-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary-glow);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-light);
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.testi-soon-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testi-shimmer {
+  height: 10px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--border-subtle) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-slide 1.8s ease-in-out infinite;
+}
+
+.testi-shimmer-long  { width: 80%; }
+.testi-shimmer-med   { width: 60%; }
+.testi-shimmer-short { width: 40%; height: 8px; opacity: 0.6; }
+
+@keyframes shimmer-slide {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.testi-soon-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 50px;
+  transition: opacity 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+
+.testi-soon-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(44, 128, 255, 0.4);
+}
+
+.testi-soon-cta i { font-size: 15px; }
+
+@media (max-width: 600px) {
+  .testi-soon-wrapper { padding: 40px 20px; }
+  .testi-soon-title   { font-size: 19px; }
 }
 
 .achievement-card:hover {
