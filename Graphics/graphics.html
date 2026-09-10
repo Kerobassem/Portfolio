@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Design Portfolio | Kyrillos Bassem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="graphic.css">
+</head>
+<body>
+<script src="bg-animation.js" defer></script>
+<!-- Floating Orbs -->
+<div class="floating-orb orb-1"></div>
+<div class="floating-orb orb-2"></div>
+<div class="floating-orb orb-3"></div>
+
+<!-- Loader -->
+<div id="page-loader">
+  <svg class="loader-logo" viewBox="0 0 255.87 191.01" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.56,0h27.15c.86,0,1.56.77,1.56,1.72v80.07c0,1.55,1.71,2.31,2.69,1.2L105.31.53c.29-.34.7-.53,1.12-.53h36.24c1.37,0,2.07,1.79,1.15,2.9L2.71,170.5c-.97,1.15-2.71.39-2.71-1.17V1.72C0,.77.7,0,1.56,0Z"/>
+    <path d="M28.67,159.17L2,188.23c-.73.8-.22,2.18.81,2.18h26.67c.64,0,1.15-.57,1.15-1.27v-29.06c0-1.13-1.24-1.7-1.97-.9Z"/>
+    <path d="M81.3,92.96l-19.03,21.33c-.76.85-.77,2.21-.03,3.08l61.91,72.93c.38.45.92.7,1.47.7h35.04c1.75,0,2.67-2.3,1.49-3.72l-77.92-94.26c-.78-.94-2.12-.97-2.93-.06Z"/>
+    <path d="M128.94,28l20.39-23.92C151.54,1.49,154.77,0,158.17,0h44.18c1.11,0,2.16.14,3.22.45,8.14,2.36,42.72,14.61,42.07,52.22-.21,12.48-.57,20.12-7.11,29.81-3.21,4.76-2.96,11.23,1.1,15.28,7.38,7.36,16.63,21.3,13.67,43.38-3.98,29.71-29.55,44.68-37.66,48.72-1.56.78-3.27,1.15-5.02,1.15h-32.54c-3.42,0-6.66-1.5-8.86-4.11l-17.12-20.24c-1.76-2.08-.45-5.47,2.13-5.51l45.09-.7s24.44-3.62,21.88-30.16c-2.55-26.54-33.09-23.73-33.09-23.73h-73c-1.64,0-2.97-1.47-2.97-3.28v-21.24c0-1.79,1.31-3.25,2.93-3.27l84.2-1.13c2.03-.03,4.06-.52,5.75-1.63,3.44-2.25,8.68-7.35,10.38-18.09.25-1.57.2-3.29-.19-4.83-2.27-8.97-8.11-14.04-11.75-16.41-1.76-1.15-3.81-1.72-5.91-1.76l-68.52-1.41c-2.58-.05-3.87-3.45-2.11-5.52Z"/>
+  </svg>
+  <div class="loader-text">Loading Design...</div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar" id="topBar">
+  <a href="../index.html" class="logo-container">
+    <svg class="kb-logo" viewBox="0 0 255.87 191.01" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.56,0h27.15c.86,0,1.56.77,1.56,1.72v80.07c0,1.55,1.71,2.31,2.69,1.2L105.31.53c.29-.34.7-.53,1.12-.53h36.24c1.37,0,2.07,1.79,1.15,2.9L2.71,170.5c-.97,1.15-2.71.39-2.71-1.17V1.72C0,.77.7,0,1.56,0Z"/>
+      <path d="M28.67,159.17L2,188.23c-.73.8-.22,2.18.81,2.18h26.67c.64,0,1.15-.57,1.15-1.27v-29.06c0-1.13-1.24-1.7-1.97-.9Z"/>
+      <path d="M81.3,92.96l-19.03,21.33c-.76.85-.77,2.21-.03,3.08l61.91,72.93c.38.45.92.7,1.47.7h35.04c1.75,0,2.67-2.3,1.49-3.72l-77.92-94.26c-.78-.94-2.12-.97-2.93-.06Z"/>
+      <path d="M128.94,28l20.39-23.92C151.54,1.49,154.77,0,158.17,0h44.18c1.11,0,2.16.14,3.22.45,8.14,2.36,42.72,14.61,42.07,52.22-.21,12.48-.57,20.12-7.11,29.81-3.21,4.76-2.96,11.23,1.10,15.28,7.38,7.36,16.63,21.3,13.67,43.38-3.98,29.71-29.55,44.68-37.66,48.72-1.56.78-3.27,1.15-5.02,1.15h-32.54c-3.42,0-6.66-1.5-8.86-4.11l-17.12-20.24c-1.76-2.08-.45-5.47,2.13-5.51l45.09-.7s24.44-3.62,21.88-30.16c-2.55-26.54-33.09-23.73-33.09-23.73h-73c-1.64,0-2.97-1.47-2.97-3.28v-21.24c0-1.79,1.31-3.25,2.93-3.27l84.2-1.13c2.03-.03,4.06-.52,5.75-1.63,3.44-2.25,8.68-7.35,10.38-18.09.25-1.57.2-3.29-.19-4.83-2.27-8.97-8.11-14.04-11.75-16.41-1.76-1.15-3.81-1.72-5.91-1.76l-68.52-1.41c-2.58-.05-3.87-3.45-2.11-5.52Z"/>
+    </svg>
+    <span class="logo-text">Graphic Design</span>
+  </a>
+  
+  <div class="nav-actions">
+    <a href="../index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i> <span>Back</span>
+    </a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="theme-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="page-hero">
+  <div class="hero-bg-text" id="heroBg">DESIGN</div>
+  <div class="hero-content">
+    <span class="hero-badge"><i class="fa-solid fa-palette"></i>&nbsp; Graphic Design Portfolio</span>
+    <h1 class="hero-title">
+      <span class="line1">Visuals That</span>
+      <span class="line2">Speak Loud</span>
+    </h1>
+    <p class="hero-sub">Social media posts, event banners, brand posters, and print-ready designs — built with Photoshop, Illustrator & Figma.</p>
+    <div class="hero-cta-row">
+      <a href="#portfolio" class="btn-pill btn-filled"><i class="fa-solid fa-images"></i> See the Work</a>
+      <a href="#pricing" class="btn-pill btn-outline"><i class="fa-solid fa-tags"></i> View Pricing</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <i class="fa-solid fa-chevron-down"></i>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div class="section-wrap visible" style="padding-top:0;padding-bottom:0;max-width:1000px;">
+  <div class="stats-strip">
+    <div class="stat-block">
+      <div class="stat-num" data-target="50">0</div>
+      <div class="stat-lbl">Designs Created</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" data-target="3">0</div>
+      <div class="stat-lbl">Tools Mastered</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" data-target="1">0</div>
+      <div class="stat-lbl">Year DSC Active</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">∞</div>
+      <div class="stat-lbl">Creative Drive</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PORTFOLIO ══ -->
+<div class="section-wrap" id="portfolio">
+  <div class="section-top">
+    <span class="section-label">Featured Work</span>
+    <h2 class="section-title">Design Gallery</h2>
+    <p class="section-sub">A selection of graphic design work — from event posters to brand identity and social content.</p>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="social">Social Media</button>
+    <button class="filter-btn" data-filter="poster">Posters</button>
+    <button class="filter-btn" data-filter="brand">Brand Identity</button>
+    <button class="filter-btn" data-filter="print">Print Design</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-grid" id="gallery">
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/Egypt 8.webp" data-title="Egypt — Land of Kings" data-cat-label="Cinematic Poster">
+      <div class="gallery-visual">
+        <img src="Posters/Egypt 8.webp" alt="Egypt: Land of Kings" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Cinematic Poster</p><h3 class="gallery-title">Egypt — Land of Kings</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/FCLB final.webp" data-title="مصنع الصابون — Fight Club Remake" data-cat-label="Fan Art / Photo Manipulation">
+      <div class="gallery-visual">
+        <img src="Posters/FCLB final.webp" alt="Fight Club Poster Remake" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Fan Art / Photo Manipulation</p><h3 class="gallery-title">مصنع الصابون — Fight Club Remake</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/Freedom 2.0.webp" data-title="Freedom" data-cat-label="Conceptual Art Poster">
+      <div class="gallery-visual">
+        <img src="Posters/Freedom 2.0.webp" alt="Freedom Poster" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Conceptual Art Poster</p><h3 class="gallery-title">Freedom</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/Khufu_final 0.3.webp" data-title="خوفو — Khufu" data-cat-label="Thriller Movie Poster">
+      <div class="gallery-visual">
+        <img src="Posters/Khufu_final 0.3.webp" alt="Khufu Movie Poster" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Thriller Movie Poster</p><h3 class="gallery-title">خوفو — Khufu</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/Nothing-1.1.webp" data-title="Nothing" data-cat-label="Conceptual / Psychological">
+      <div class="gallery-visual">
+        <img src="Posters/Nothing-1.1.webp" alt="Nothing Poster" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Conceptual / Psychological</p><h3 class="gallery-title">Nothing</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/STEEL2.webp" data-title="Man of Steel" data-cat-label="Fan Art / Graphic Poster">
+      <div class="gallery-visual">
+        <img src="Posters/STEEL2.webp" alt="Man of Steel Poster" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Fan Art / Graphic Poster</p><h3 class="gallery-title">Man of Steel</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="social" data-img="Posters/summer.webp" data-title="Summer" data-cat-label="Editorial / Portrait">
+      <div class="gallery-visual">
+        <img src="Posters/summer.webp" alt="Summer Editorial Poster" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Editorial / Portrait</p><h3 class="gallery-title">Summer</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/TheMatrixFINAL.webp" data-title="The Matrix — Personalised Remake" data-cat-label="Fan Art / Digital Manipulation">
+      <div class="gallery-visual">
+        <img src="Posters/TheMatrixFINAL.webp" alt="The Matrix Poster Remake" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Fan Art / Digital Manipulation</p><h3 class="gallery-title">The Matrix — Personalised Remake</h3></div>
+    </div>
+
+    <div class="gallery-item" data-cat="poster" data-img="Posters/Ferrari.Final.webp" data-title="Ferrari — Personalised Remake" data-cat-label="Fan Art / Digital Manipulation">
+      <div class="gallery-visual">
+        <img src="Posters/Ferrari.Final.webp" alt="Ferrari Poster Remake" loading="lazy">
+        <div class="gallery-overlay">
+          <button class="overlay-icon lb-open" title="View Full Poster"><i class="fa-solid fa-expand"></i></button>
+          <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="overlay-icon" title="See on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gallery-info"><p class="gallery-cat">Fan Art / Digital Manipulation</p><h3 class="gallery-title">Ferrari — Personalised Remake</h3></div>
+    </div>
+
+  </div>
+
+  <!-- Tools Used Row -->
+  <div class="tools-row">
+    <div class="tool-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop">Photoshop</div>
+    <div class="tool-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" alt="Illustrator">Illustrator</div>
+    <div class="tool-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">Figma</div>
+    <div class="tool-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" alt="Premiere Pro">Premiere Pro</div>
+  </div>
+</div>
+
+<!-- ══ PROCESS ══ -->
+<div class="section-wrap" id="process">
+  <div class="section-top">
+    <span class="section-label">How I Work</span>
+    <h2 class="section-title">Design Process</h2>
+  </div>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-num">01</div><div class="process-icon"><i class="fa-solid fa-comments"></i></div><h3>Discovery</h3></div>
+    <div class="process-card"><div class="process-num">02</div><div class="process-icon"><i class="fa-solid fa-pencil"></i></div><h3>Concept</h3></div>
+    <div class="process-card"><div class="process-num">03</div><div class="process-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Design</h3></div>
+    <div class="process-card"><div class="process-num">04</div><div class="process-icon"><i class="fa-solid fa-rotate"></i></div><h3>Revision</h3></div>
+    <div class="process-card"><div class="process-num">05</div><div class="process-icon"><i class="fa-solid fa-file-export"></i></div><h3>Delivery</h3></div>
+  </div>
+</div>
+
+<!-- ══ PRICING ══ -->
+<div class="section-wrap" id="pricing">
+  <div class="section-top">
+    <span class="section-label">Pricing Plans</span>
+    <h2 class="section-title">Services & Pricing</h2>
+    <p class="section-sub">Choose a service category below to explore transparent pricing.</p>
+  </div>
+
+  <!-- Service Tab Toggle -->
+  <div class="pricing-tabs">
+    <button class="pricing-tab active" data-tab="graphic">
+      <i class="fa-solid fa-palette"></i> Graphic Design
+    </button>
+    <button class="pricing-tab" data-tab="uiux">
+      <i class="fa-brands fa-figma"></i> UI/UX Design
+    </button>
+    <button class="pricing-tab" data-tab="web">
+      <i class="fa-solid fa-globe"></i> Web Design
+    </button>
+  </div>
+
+  <!-- Graphic Design Cards -->
+  <div class="pricing-panel" id="tab-graphic">
+    <div class="pricing-grid">
+      <div class="price-card"><div class="price-icon"><i class="fa-solid fa-seedling"></i></div><h2>Quick Design</h2><div class="price-amount"><span class="price-currency">$</span><span class="price-num">5</span></div><ul class="price-features"><li><i class="fa-solid fa-check"></i> 1 Social Media Post</li><li><i class="fa-solid fa-check"></i> 1 Revision Round</li><li><i class="fa-solid fa-check"></i> PNG + PDF Export</li><li class="off"><i class="fa-solid fa-xmark"></i> Source File</li></ul><a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Get Started <i class="fa-solid fa-arrow-right"></i></a></div>
+
+      <div class="price-card popular"><div class="popular-badge">Most Popular</div><div class="price-icon"><i class="fa-solid fa-rocket"></i></div><h2>Content Pack</h2><div class="price-amount"><span class="price-currency">$</span><span class="price-num">25</span></div><ul class="price-features"><li><i class="fa-solid fa-check"></i> Up to 5 Designs</li><li><i class="fa-solid fa-check"></i> Visual Style</li><li><i class="fa-solid fa-check"></i> 2 Revision Rounds</li><li><i class="fa-solid fa-check"></i> PNG, PDF & SVG</li></ul><a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-filled">Choose Pack <i class="fa-solid fa-arrow-right"></i></a></div>
+
+      <div class="price-card"><div class="price-icon"><i class="fa-solid fa-crown"></i></div><h2>Brand Identity</h2><div class="price-amount"><span class="price-currency">$</span><span class="price-num">50</span></div><ul class="price-features"><li><i class="fa-solid fa-check"></i> Logo + Variations</li><li><i class="fa-solid fa-check"></i> Color Palette</li><li><i class="fa-solid fa-check"></i> 5 Social Templates</li><li><i class="fa-solid fa-check"></i> All Source Files</li></ul><a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Start Project <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+  </div>
+
+  <!-- UI/UX Design Cards -->
+  <div class="pricing-panel hidden" id="tab-uiux">
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <h2>Wireframe</h2>
+        <p class="price-desc">Lo-fi wireframes and user flow maps for early-stage products.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">15</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Up to 5 Screens</li>
+          <li><i class="fa-solid fa-check"></i> User Flow Diagram</li>
+          <li><i class="fa-solid fa-check"></i> Lo-Fi Wireframes</li>
+          <li><i class="fa-solid fa-check"></i> Figma Source File</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> Hi-Fi Mockup</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> Interactive Prototype</li>
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="price-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="price-icon"><i class="fa-brands fa-figma"></i></div>
+        <h2>App Design</h2>
+        <p class="price-desc">Full hi-fi mobile or web UI with interactive prototype and handoff.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">40</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Up to 10 Screens</li>
+          <li><i class="fa-solid fa-check"></i> Hi-Fi Mockups</li>
+          <li><i class="fa-solid fa-check"></i> Interactive Prototype</li>
+          <li><i class="fa-solid fa-check"></i> Design System</li>
+          <li><i class="fa-solid fa-check"></i> Developer Handoff</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> User Research</li>
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-filled">Choose Plan <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h2>Full UX Case Study</h2>
+        <p class="price-desc">End-to-end UX: research, personas, flows, hi-fi prototype & presentation.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">80</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> User Research</li>
+          <li><i class="fa-solid fa-check"></i> Personas & Empathy Maps</li>
+          <li><i class="fa-solid fa-check"></i> Full Hi-Fi Prototype</li>
+          <li><i class="fa-solid fa-check"></i> Design System</li>
+          <li><i class="fa-solid fa-check"></i> Developer Handoff</li>
+          <li><i class="fa-solid fa-check"></i> Case Study Deck</li>
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Web Design Cards -->
+  <div class="pricing-panel hidden" id="tab-web">
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-icon"><i class="fa-solid fa-laptop"></i></div>
+        <h2>Landing Page</h2>
+        <p class="price-desc">Single-page, conversion-optimized landing page with modern design.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">60</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+          <li><i class="fa-solid fa-check"></i> SEO Optimized</li>
+          <li><i class="fa-solid fa-check"></i> Contact Form</li>
+          <li><i class="fa-solid fa-check"></i> Analytics Setup</li>
+          <li><i class="fa-solid fa-check"></i> 1 Revision Round</li>
+          <li class="off"><i class="fa-solid fa-xmark"></i> CMS Backend</li>
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="price-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="price-icon"><i class="fa-solid fa-window-maximize"></i></div>
+        <h2>Business Website</h2>
+        <p class="price-desc">Multi-page professional website with portfolio, services & testimonials.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">120</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> 5-7 Custom Pages</li>
+          <li><i class="fa-solid fa-check"></i> Fully Responsive</li>
+          <li><i class="fa-solid fa-check"></i> CMS Backend</li>
+          <li><i class="fa-solid fa-check"></i> SEO & Performance</li>
+          <li><i class="fa-solid fa-check"></i> 2 Revision Rounds</li>
+          <!-- <li><i class="fa-solid fa-check"></i> 30 Days Support</li> -->
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-filled">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h2>Portfolio Website</h2>
+        <p class="price-desc">Showcase your work with a stunning portfolio site designed for creatives & professionals.</p>
+        <div class="price-amount"><span class="price-currency">$</span><span class="price-num">90</span><span class="price-period">&nbsp;/ project</span></div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> 3-5 Portfolio Pages</li>
+          <li><i class="fa-solid fa-check"></i> Project Gallery</li>
+          <li><i class="fa-solid fa-check"></i> Fully Responsive</li>
+          <li><i class="fa-solid fa-check"></i> SEO Optimized</li>
+          <li><i class="fa-solid fa-check"></i> Contact Form</li>
+          <!-- <li><i class="fa-solid fa-check"></i> 45 Days Support</li> -->
+        </ul>
+        <a href="https://wa.me/201212349629" target="_blank" class="price-btn price-btn-outline">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PROTOTYPE VIDEOS ══ -->
+<div class="section-wrap" id="videos">
+  <div class="section-top">
+    <span class="section-label">UI/UX in Motion</span>
+    <h2 class="section-title">Prototype Walkthroughs</h2>
+    <p class="section-sub">Interactive prototypes and design flows — watch the UX come to life.</p>
+  </div>
+
+  <div class="video-grid" id="protoGrid">
+
+    <!-- Video Card 1 — replace src with your YouTube embed URL -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
+          title="Prototype Walkthrough 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="video-cat"><i class="fa-brands fa-figma"></i> Figma Prototype</span>
+        <h3 class="video-title">NABD — Healthcare App Walkthrough</h3>
+        <p class="video-desc">Full interactive prototype demo of the NABD healthcare mobile app — flows, transitions, and micro-interactions.</p>
+      </div>
+    </div>
+
+    <!-- Video Card 2 — replace src with your YouTube embed URL -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7375663116858195968?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+      </div>
+      <div class="video-info">
+        <span class="video-cat"><i class="fa-brands fa-figma"></i> Figma Prototype</span>
+        <h3 class="video-title">VORTEX — Car Marketplace Walkthrough</h3>
+        <p class="video-desc">Premium car marketplace prototype — browse, filter, and checkout flows with smooth animated transitions.</p>
+      </div>
+    </div>
+
+    <!-- Video Card 3 — replace src with your YouTube embed URL -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
+          title="Prototype Walkthrough 3"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <span class="video-cat"><i class="fa-solid fa-mobile-screen-button"></i> UX Flow</span>
+        <h3 class="video-title">Onboarding Flow Design</h3>
+        <p class="video-desc">Step-by-step onboarding UX — from splash screen to main dashboard, with animated component reveals.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="video-add-hint">
+    <!-- <i class="fa-solid fa-circle-info"></i>
+    Replace the <code>YOUR_VIDEO_ID</code> placeholders above with your YouTube video IDs to activate the embeds. -->
+  </div>
+</div>
+
+<!-- ══ DESIGN REELS ══ -->
+<div class="section-wrap" id="reels">
+  <div class="section-top">
+    <span class="section-label">Short Form Content</span>
+    <h2 class="section-title">Design Reels</h2>
+    <p class="section-sub">Speed builds, process reels, and behind-the-scenes design content.</p>
+  </div>
+
+  <div class="reels-grid" id="reelsGrid">
+
+    <!-- Reel 1 — Instagram embed -->
+    <div class="reel-card">
+      <div class="reel-embed-wrap">
+        <iframe
+          
+          src="https://www.instagram.com/reel/DEDxTuPsgLE/embed/"
+          title="Design Reel 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag"><i class="fa-solid fa-film"></i> Speed Build</span>
+        <p class="reel-title">Poster Design — Time-Lapse</p>
+      </div>
+    </div>
+
+    <!-- Reel 2 -->
+    <div class="reel-card">
+      <div class="reel-embed-wrap">
+        <iframe
+          src="https://www.instagram.com/reel/DMjTX6MoKoS/embed/"
+          title="Design Reel 2"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag"><i class="fa-brands fa-figma"></i> Process</span>
+        <p class="reel-title">UI Design Process — From Wireframe to Hi-Fi</p>
+      </div>
+    </div>
+
+    <!-- Reel 3 -->
+    <div class="reel-card">
+      <div class="reel-embed-wrap">
+        <iframe
+          src="https://www.instagram.com/reel/DXel5fFCIUp/embed/"
+          title="Design Reel 3"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Transformation</span>
+        <p class="reel-title">Before & After — UI Redesign Reel</p>
+      </div>
+    </div>
+
+    <!-- Reel 4 -->
+    <div class="reel-card">
+      <div class="reel-embed-wrap">
+        <iframe
+          src="https://www.instagram.com/reel/DF1Skn7IArt/embed/"
+          title="Design Reel 4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag"><i class="fa-solid fa-palette"></i> Graphic</span>
+        <p class="reel-title">Photoshop Manipulation — Speed Art</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="video-add-hint">
+    <!-- <i class="fa-solid fa-circle-info"></i>
+    Replace <code>YOUR_REEL_ID</code> with YouTube Shorts IDs, or swap the <code>&lt;iframe&gt;</code> for an Instagram embed snippet. -->
+  </div>
+</div>
+
+<!-- ══ CTA ══ -->
+<div class="cta-band" style="max-width:1200px;margin:0 auto 80px;">
+  <h2>Need something custom?</h2>
+  <div class="cta-buttons">
+    <a href="https://wa.me/201212349629" target="_blank" class="btn-pill btn-filled"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+    <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="btn-pill btn-outline"><i class="fa-brands fa-instagram"></i> See More on Instagram</a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="mini-footer">
+  <p>© 2026 Kyrillos Bassem · <a href="index.html">Back to Portfolio</a></p>
+</footer>
+
+<!-- Cursors -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ══ LIGHTBOX MODAL ══ -->
+<div id="lightbox" class="lb-backdrop" role="dialog" aria-modal="true" aria-label="Full poster view">
+  <button class="lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-inner">
+    <img id="lbImg" src="" alt="" class="lb-img">
+    <div class="lb-caption">
+      <span class="lb-cat" id="lbCat"></span>
+      <p class="lb-title" id="lbTitle"></p>
+      <a id="lbIgLink" href="https://www.instagram.com/poster_g0old/" target="_blank" class="lb-ig-btn">
+        <i class="fa-brands fa-instagram"></i> View on Instagram
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile hamburger nav -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+  <i class="fa-solid fa-bars"></i>
+</button>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#portfolio" class="mobile-nav-link">Gallery</a>
+  <a href="#process"   class="mobile-nav-link">Process</a>
+  <a href="#pricing"   class="mobile-nav-link">Pricing</a>
+  <a href="#videos"    class="mobile-nav-link">Videos</a>
+  <a href="#reels"     class="mobile-nav-link">Reels</a>
+  <a href="index.html" class="mobile-nav-link">← Portfolio</a>
+</div>
+
+<script src="graphic.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="icon.webp">
+    <title>Kyroles Bassem - UI/UX Designer & Mobile Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body dir="ltr">
+
+    <div id="page-loader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle r="32" cy="40" cx="40"></circle>
+            </svg>
+        </div>
+        <div class="loader triangle">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <rect height="64" width="64" y="8" x="8"></rect>
+            </svg>
+        </div>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <!-- Controls -->
+    <div class="controls-container">
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="switchLanguage('ar')">AR</button>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <svg class="theme-icon sun-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+    <svg class="kb-logo" viewBox="0 0 255.87 191.01" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.56,0h27.15c.86,0,1.56.77,1.56,1.72v80.07c0,1.55,1.71,2.31,2.69,1.2L105.31.53c.29-.34.7-.53,1.12-.53h36.24c1.37,0,2.07,1.79,1.15,2.9L2.71,170.5c-.97,1.15-2.71.39-2.71-1.17V1.72C0,.77.7,0,1.56,0Z"/>
+      <path d="M28.67,159.17L2,188.23c-.73.8-.22,2.18.81,2.18h26.67c.64,0,1.15-.57,1.15-1.27v-29.06c0-1.13-1.24-1.7-1.97-.9Z"/>
+      <path d="M81.3,92.96l-19.03,21.33c-.76.85-.77,2.21-.03,3.08l61.91,72.93c.38.45.92.7,1.47.7h35.04c1.75,0,2.67-2.3,1.49-3.72l-77.92-94.26c-.78-.94-2.12-.97-2.93-.06Z"/>
+      <path d="M128.94,28l20.39-23.92C151.54,1.49,154.77,0,158.17,0h44.18c1.11,0,2.16.14,3.22.45,8.14,2.36,42.72,14.61,42.07,52.22-.21,12.48-.57,20.12-7.11,29.81-3.21,4.76-2.96,11.23,1.10,15.28,7.38,7.36,16.63,21.3,13.67,43.38-3.98,29.71-29.55,44.68-37.66,48.72-1.56.78-3.27,1.15-5.02,1.15h-32.54c-3.42,0-6.66-1.5-8.86-4.11l-17.12-20.24c-1.76-2.08-.45-5.47,2.13-5.51l45.09-.7s24.44-3.62,21.88-30.16c-2.55-26.54-33.09-23.73-33.09-23.73h-73c-1.64,0-2.97-1.47-2.97-3.28v-21.24c0-1.79,1.31-3.25,2.93-3.27l84.2-1.13c2.03-.03,4.06-.52,5.75-1.63,3.44-2.25,8.68-7.35,10.38-18.09.25-1.57.2-3.29-.19-4.83-2.27-8.97-8.11-14.04-11.75-16.41-1.76-1.15-3.81-1.72-5.91-1.76l-68.52-1.41c-2.58-.05-3.87-3.45-2.11-5.52Z"/>
+    </svg>
+  </a>
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-en="About" data-ar="عني">About</a></li>
+                <li><a href="#education" data-en="Education" data-ar="التعليم">Education</a></li>
+                <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
+                <li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li>
+                <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+                <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+                <li><a href="#achievements" data-en="Achievements" data-ar="الإنجازات">Achievements</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-greeting">
+                    <span data-en="Welcome to my portfolio" data-ar="مرحباً بك في معرض أعمالي">Welcome to my
+                        portfolio</span>
+                </span>
+                <h1 class="hero-title" data-en="Kyrillos Bassem" data-ar="كيرلس باسم">Kyrillos Bassem</h1>
+                <!-- <p class="hero-role" data-en="UI/UX Designer & Mobile Developer" data-ar="مصمم واجهات و مطور تطبيقات موبايل">UI/UX Designer & Mobile Developer</p> -->
+                <p class="hero-role">
+                    <span class="prompt">&gt;</span>
+                    <span class="hero-word-wrap">
+                        <span class="hero-word" id="animated-word"></span><span class="cursor">_</span>
+                    </span>
+                </p>
+                <p class="hero-tagline lang-en">Creating intuitive and visually appealing experiences that make
+                    technology easy and enjoyable for users.</p>
+                <p class="hero-tagline lang-ar hidden">أصنع تجارب بديهية وجذابة بصرياً تجعل التكنولوجيا سهلة وممتعة
+                    للمستخدمين.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span data-en="View Projects" data-ar="عرض المشاريع">View Projects</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3.00</div>
+                        <div class="stat-label" data-en="GPA / 4.0" data-ar="المعدل / 4.0">GPA / 4.0</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">92%</div>
+                        <div class="stat-label" data-en="NTI Assessment" data-ar="تقييم NTI">NTI Assessment</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label" data-en="Internships" data-ar="تدريبات">Internships</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-frame"></div>
+                    <img src="assets/Kero.webp"  loading="lazy"  alt="Kyroles Bassem">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <p class="section-label" data-en="GET TO KNOW ME" data-ar="تعرف علي">GET TO KNOW ME</p>
+            <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image-container">
+                <div class="about-decoration"></div>
+                <div class="about-image">
+                    <img src="assets/1.webp"  loading="lazy"  alt="About Kyrillos">
+                </div>
+            </div>
+            <div class="about-text">
+                <h3 data-en="Hi, I'm Kyrillos!" data-ar="مرحباً، أنا كيرلس!">Hi, I'm Kyrillos!</h3>
+                <p class="lang-en">I am a passionate and motivated individual with a strong interest in UI/UX design and
+                    mobile development. I enjoy creating intuitive and visually appealing experiences that make
+                    technology easy and enjoyable for users.</p>
+                <p class="lang-en">Always eager to learn and improve, I thrive in collaborative environments and am
+                    committed to delivering high-quality work.</p>
+                <p class="lang-ar hidden">أنا شخص شغوف ومتحمس ولدي اهتمام قوي بتصميم تجربة المستخدم وتطوير تطبيقات
+                    الهواتف. أحب خلق تجارب بصرية سهلة الاستخدام وممتعة للمستخدمين.</p>
+                <p class="lang-ar hidden">متحمس دائمًا للتعلم وتحسين مهاراتي، وأفضل العمل في بيئات تعاونية مع الالتزام
+                    بتقديم عمل عالي الجودة.</p>
+
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="highlight-info">
+                            <h4 data-en="Passionate" data-ar="شغوف">Passionate</h4>
+                            <p class="lang-en">Dedicated to excellence</p>
+                            <p class="lang-ar hidden">ملتزم بالتميز</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="highlight-info">
+                            <h4 data-en="Fast Learner" data-ar="سريع التعلم">Fast Learner</h4>
+                            <p class="lang-en">Always improving</p>
+                            <p class="lang-ar hidden">دائم التطور</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <div class="highlight-info">
+                            <h4 data-en="Team Player" data-ar="لاعب فريق">Team Player</h4>
+                            <p class="lang-en">Collaborative mindset</p>
+                            <p class="lang-ar hidden">عقلية تعاونية</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="highlight-info">
+                            <h4 data-en="Creative" data-ar="مبدع">Creative</h4>
+                            <p class="lang-en">Innovative solutions</p>
+                            <p class="lang-ar hidden">حلول مبتكرة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-header">
+            <p class="section-label" data-en="ACADEMIC BACKGROUND" data-ar="الخلفية الأكاديمية">ACADEMIC BACKGROUND</p>
+            <h2 class="section-title" data-en="Education" data-ar="التعليم">Education</h2>
+        </div>
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-header">
+                    <div>
+                        <h3 class="education-degree" data-en="Bachelor of Computer Science"
+                            data-ar="بكالوريوس علوم الحاسوب">Bachelor of Computer Science</h3>
+                        <p class="education-school" data-en="[Your University Name]" data-ar="[اكاديميه اخبار اليوم]">
+                            [Akhbar ElYom Academy]</p>
+                        <p class="education-gpa" data-en="GPA: 3.04 / 4.0" data-ar="المعدل: 3.04 / 4.0">GPA: 3.04 / 4.0
+                        </p>
+                    </div>
+                    <span class="education-badge" data-en="3rd Year Student" data-ar="طالب السنة الثالثة">3rd Year
+                        Student</span>
+                </div>
+                <p class="education-description lang-en">Currently pursuing a Bachelor's degree in Computer Science with
+                    a focus on software engineering, mobile application development, and user experience design.
+                    Actively engaged in coursework and projects that bridge the gap between design and development.</p>
+                <p class="education-description lang-ar hidden">حالياً أتابع درجة البكالوريوس في علوم الحاسوب مع التركيز
+                    على هندسة البرمجيات وتطوير تطبيقات الهاتف المحمول وتصميم تجربة المستخدم. منخرط بنشاط في الدورات
+                    الدراسية والمشاريع التي تربط بين التصميم والتطوير.</p>
+                <div class="education-courses">
+                    <span class="course-tag" data-en="Mobile Development" data-ar="تطوير الموبايل">Mobile
+                        Development</span>
+                    <span class="course-tag" data-en="UI/UX Design" data-ar="تصميم واجهات">UI/UX Design</span>
+                    <span class="course-tag" data-en="Software Engineering" data-ar="هندسة البرمجيات">Software
+                        Engineering</span>
+                    <span class="course-tag" data-en="Data Structures" data-ar="هياكل البيانات">Data Structures</span>
+                    <span class="course-tag" data-en="Algorithms" data-ar="الخوارزميات">Algorithms</span>
+                    <span class="course-tag" data-en="Database Systems" data-ar="أنظمة قواعد البيانات">Database
+                        Systems</span>
+                    <span class="course-tag" data-en="Web Development" data-ar="تطوير الويب">Web Development</span>
+                    <span class="course-tag" data-en="HCI" data-ar="التفاعل البشري">HCI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <!-- Title -->
+        <div class="skills-main-header">
+            <h2 class="skills-main-title" data-en="My Skills" data-ar="مهاراتي">My Skills</h2>
+            <div class="skills-title-bar"></div>
+        </div>
+
+        <!-- Technical + Soft Skills two-column -->
+        <div class="skills-two-col">
+
+            <!-- Technical -->
+            <div class="skills-group">
+                <div class="skills-group-heading">
+                    <i class="fas fa-laptop-code me-2 tech-icon" style="font-size: 24px;"></i>
+                    <span class="sgh-label tech-label" data-en="Technical" data-ar="التقنية">Technical</span>
+                </div>
+                <div class="skill-cards-grid">
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+                            alt="Flutter">
+                        <span data-en="Flutter" data-ar="فلاتر">Flutter</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+                            alt="Dart">
+                        <span data-en="Dart" data-ar="دارت">Dart</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+                            alt="Firebase">
+                        <span data-en="Firebase" data-ar="فايربيس">Firebase</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                            alt="Figma">
+                        <span data-en="Figma" data-ar="فيجما">Figma</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg"
+                            alt="Adobe XD">
+                        <span data-en="Adobe XD" data-ar="أدوبي XD">Adobe XD</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                            alt="Git">
+                        <span data-en="Git & GitHub" data-ar="جيت وجيتهاب">Git & GitHub</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                            alt="HTML">
+                        <span data-en="HTML" data-ar="HTML">HTML</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                            alt="CSS">
+                        <span data-en="CSS" data-ar="HTML">CSS</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="JavaScript">
+                        <span data-en="JavaScript" data-ar="JavaScript">JavaScript</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Column divider -->
+            <div class="skills-col-divider"></div>
+
+            <!-- Soft Skills -->
+            <div class="skills-group">
+                <div class="skills-group-heading">
+                    <i class="fas fa-users me-2 soft-icon" style="font-size: 24px;"></i>
+                    <span class="sgh-label soft-label" data-en="Soft Skills" data-ar="المهارات الشخصية">Soft Skills</span>
+                </div>
+                <div class="skill-cards-grid">
+                    <div class="skill-card">
+                        <i class="fa-solid fa-lightbulb skill-fa-icon" style="color:#f5c518"></i>
+                        <span data-en="Problem Solving" data-ar="حل المشاكل">Problem Solving</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-person-chalkboard skill-fa-icon" style="color:#4ade80"></i>
+                        <span data-en="Leadership" data-ar="القيادة">Leadership</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-brain skill-fa-icon" style="color:#a78bfa"></i>
+                        <span data-en="Self-Learning" data-ar="التعلم الذاتي">Self-Learning</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-people-group skill-fa-icon" style="color:#38bdf8"></i>
+                        <span data-en="Teamwork" data-ar="العمل الجماعي">Teamwork</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-clock-rotate-left skill-fa-icon" style="color:#fb923c"></i>
+                        <span data-en="Time Management" data-ar="إدارة الوقت">Time Management</span>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-solid fa-comment-dots skill-fa-icon" style="color:#f472b6"></i>
+                        <span data-en="Communication" data-ar="التواصل">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Tools I Use -->
+        <div class="skills-subsection">
+            <div class="skills-sub-heading">
+                <i class="fa-solid fa-screwdriver-wrench sub-icon tools-sub-icon"></i>
+                <span data-en="Tools I Use" data-ar="الأدوات التي أستخدمها">Tools I Use</span>
+            </div>
+            <div class="tools-cards-grid">
+                <div class="skill-card tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                        alt="VS Code">
+                    <span>VS Code</span>
+                </div>
+                <div class="skill-card tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+                        alt="Android Studio">
+                    <span>Android Studio</span>
+                </div>
+                <div class="skill-card tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                        alt="Figma">
+                    <span>Figma</span>
+                </div>
+                <div class="skill-card tool-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="skill-card tool-card">
+                    <i class="fa-brands fa-github skill-fa-icon" style="color:#e6edf3"></i>
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </div>
+        <!-- Additional Skills -->
+        <div class="skills-subsection">
+            <div class="skills-sub-heading">
+                <i class="fa-solid fa-cubes sub-icon additional-sub-icon"></i>
+                <span data-en="Additional Skills" data-ar="مهارات إضافية">Additional Skills</span>
+            </div>
+            <div class="additional-skills-grid">
+                <div class="add-skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+                        alt="Photoshop">
+                    <span data-en="Photoshop" data-ar="فوتوشوب">Photoshop</span>
+                </div>
+                <div class="add-skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg"
+                        alt="Premiere Pro" />
+                    <span data-en="premiere pro" data-ar="بريمير">premiere pro</span>
+                </div>
+                <div class="add-skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg"
+                        alt="Illustrator" />
+                    <span data-en="Adobe Illustrator" data-ar="أدوبي إيلوستريتور">Illustrator</span>
+                </div>
+                <div class="add-skill-tag">
+                    <i class="fa-solid fa-file-word add-skill-fa-icon" style="color:#2b7cd3"></i>
+                    <span data-en="Microsoft Office" data-ar="مايكروسوفت أوفيس">Microsoft Office</span>
+                </div>
+                <div class="add-skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                        alt="Python">
+                    <span data-en="Python" data-ar="بايثون">Python</span>
+                </div>
+                <div class="add-skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                        alt="C++">
+                    <span data-en="C++" data-ar="سي بلس بلس">C++</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skills-subsection">
+            <div class="skills-sub-heading">
+                <i class="fa-solid fa-language sub-icon lang-sub-icon"></i>
+                <span data-en="Languages" data-ar="اللغات">Languages</span>
+            </div>
+            <div class="lang-cards-grid">
+                <div class="lang-card">
+                    <i class="fa-solid fa-star lang-badge native-badge"></i>
+                    <div class="lang-info">
+                        <h4 data-en="Arabic" data-ar="العربية">Arabic</h4>
+                        <p data-en="Native" data-ar="اللغة الأم">Native</p>
+                    </div>
+                </div>
+                <div class="lang-card">
+                    <i class="fa-solid fa-circle-check lang-badge good-badge"></i>
+                    <div class="lang-info">
+                        <h4 data-en="English" data-ar="الإنجليزية">English</h4>
+                        <p data-en="Good" data-ar="جيد">Good</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <p class="section-label" data-en="PROFESSIONAL JOURNEY" data-ar="الرحلة المهنية">PROFESSIONAL JOURNEY</p>
+            <h2 class="section-title" data-en="Work Experience" data-ar="الخبرة العملية">Work Experience</h2>
+        </div>
+        <div class="exp-timeline-grid">
+
+            <!-- DEPI -->
+            <div class="exp-tl-card">
+                <div class="exp-tl-date-badge">
+                    <span class="lang-en">12/2025 – Present</span>
+                    <span class="lang-ar hidden">12/2025 – حتى الآن</span>
+                </div>
+                <h3 class="exp-tl-title" data-en="Cross-Platform Mobile App Developer Trainee (Flutter)"
+                    data-ar="متدرب تطوير تطبيقات متعددة المنصات (فلاتر)">Cross-Platform Mobile App Developer Trainee
+                    (Flutter)</h3>
+                <p class="exp-tl-company" data-en="Ministry of Communications and Information Technology (MCIT)"
+                    data-ar="وزارة الاتصالات وتكنولوجيا المعلومات">Ministry of Communications and Information Technology
+                    (MCIT)</p>
+                <p class="exp-tl-sub" data-en="Digital Egypt Pioneers Initiative (DEPI)"
+                    data-ar="مبادرة رواد مصر الرقمية (DEPI)">Digital Egypt Pioneers Initiative (DEPI)</p>
+
+                <div class="exp-tl-car">
+                    <!-- Challenge -->
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-challenge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-challenge lang-en">Challenge</span>
+                            <span class="exp-tl-label lbl-challenge lang-ar hidden">التحدي</span>
+                            <p class="lang-en">Master Dart and the Flutter framework from scratch to build
+                                production-ready cross-platform mobile apps.</p>
+                            <p class="lang-ar hidden">إتقان لغة Dart وإطار عمل Flutter من الصفر لبناء تطبيقات موبايل
+                                جاهزة للإنتاج.</p>
+                        </div>
+                    </div>
+                    <!-- Action -->
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-action">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-action lang-en">Action</span>
+                            <span class="exp-tl-label lbl-action lang-ar hidden">الإجراء</span>
+                            <p class="lang-en">Deep-dived into Dart fundamentals, OOP principles, and Flutter's widget
+                                tree — building Stateless and Stateful components with responsive layouts.</p>
+                            <p class="lang-ar hidden">تعمقت في أساسيات Dart ومبادئ OOP وشجرة widgets في Flutter — ببناء
+                                مكونات Stateless وStateful مع تخطيطات استجابية.</p>
+                        </div>
+                    </div>
+                    <!-- Result -->
+                    <div class="exp-tl-row last-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-result">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-result lang-en">Result</span>
+                            <span class="exp-tl-label lbl-result lang-ar hidden">النتيجة</span>
+                            <p class="lang-en">Gained practical skills in asynchronous programming, clean code, and
+                                Flutter UI development — actively applying them to real-world mobile projects.</p>
+                            <p class="lang-ar hidden">اكتسبت مهارات عملية في البرمجة غير المتزامنة والكود النظيف وتطوير
+                                UI في Flutter — مطبّقاً إياها على مشاريع حقيقية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-tags">
+                    <span class="exp-tag">Flutter</span>
+                    <span class="exp-tag">Dart</span>
+                    <span class="exp-tag">OOP</span>
+                    <span class="exp-tag">Async Programming</span>
+                    <span class="exp-tag">Responsive UI</span>
+                </div>
+            </div>
+
+            <!-- NTI -->
+            <div class="exp-tl-card">
+                <div class="exp-tl-date-badge">
+                    <span class="lang-en">08/2025 – 09/2025</span>
+                    <span class="lang-ar hidden">08/2025 – 09/2025</span>
+                </div>
+                <h3 class="exp-tl-title" data-en="UI/UX Design Trainee" data-ar="متدرب تصميم UI/UX">UI/UX Design Trainee
+                </h3>
+                <p class="exp-tl-company" data-en="National Telecommunications Institute (NTI)"
+                    data-ar="المعهد القومي للاتصالات (NTI)">National Telecommunications Institute (NTI)</p>
+                <p class="exp-tl-sub" data-en="ITIDA — Remote" data-ar="إيتيدا — عن بُعد">ITIDA — Remote</p>
+
+                <div class="exp-tl-car">
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-challenge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-challenge lang-en">Challenge</span>
+                            <span class="exp-tl-label lbl-challenge lang-ar hidden">التحدي</span>
+                            <p class="lang-en">Complete an intensive 120-hour program covering both technical UI/UX
+                                design and practical freelancing preparation.</p>
+                            <p class="lang-ar hidden">إتمام برنامج مكثف مدته 120 ساعة يغطي تصميم UI/UX التقني والإعداد
+                                العملي للعمل الحر.</p>
+                        </div>
+                    </div>
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-action">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-action lang-en">Action</span>
+                            <span class="exp-tl-label lbl-action lang-ar hidden">الإجراء</span>
+                            <p class="lang-en">Completed 90 hours of technical training in user research, wireframing,
+                                prototyping, and design systems — plus 30 hours of freelancing preparation.</p>
+                            <p class="lang-ar hidden">أتممت 90 ساعة من التدريب التقني في بحث المستخدم والإطارات السلكية
+                                والنماذج الأولية وأنظمة التصميم، بالإضافة إلى 30 ساعة إعداد للعمل الحر.</p>
+                        </div>
+                    </div>
+                    <div class="exp-tl-row last-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-result">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-result lang-en">Result</span>
+                            <span class="exp-tl-label lbl-result lang-ar hidden">النتيجة</span>
+                            <p class="lang-en">Achieved a final assessment score of <strong>92%</strong>, demonstrating
+                                high proficiency in technical design concepts and earning the ITIDA/NTI certification.
+                            </p>
+                            <p class="lang-ar hidden">حققت درجة تقييم نهائية <strong>92%</strong>، مما يُظهر كفاءة عالية
+                                في مفاهيم التصميم التقني ونلت شهادة ITIDA/NTI.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-tags">
+                    <span class="exp-tag">User Research</span>
+                    <span class="exp-tag">Wireframing</span>
+                    <span class="exp-tag">Prototyping</span>
+                    <span class="exp-tag">Figma</span>
+                    <span class="exp-tag">Design Systems</span>
+                </div>
+            </div>
+
+            <!-- DSC -->
+            <div class="exp-tl-card">
+                <div class="exp-tl-date-badge">
+                    <span class="lang-en">02/2025 – Present</span>
+                    <span class="lang-ar hidden">02/2025 – حتى الآن</span>
+                </div>
+                <h3 class="exp-tl-title" data-en="Graphic Designer (Volunteer)" data-ar="مصمم جرافيك (متطوع)">Graphic
+                    Designer (Volunteer)</h3>
+                <p class="exp-tl-company" data-en="Google Developer Student Clubs (DSC)"
+                    data-ar="نوادي طلاب مطوري جوجل (DSC)">Google Developer Student Clubs (DSC)</p>
+                <p class="exp-tl-sub" data-en="Remote — University Chapter" data-ar="عن بُعد — الفصل الجامعي">Remote —
+                    University Chapter</p>
+
+                <div class="exp-tl-car">
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-challenge">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-challenge lang-en">Challenge</span>
+                            <span class="exp-tl-label lbl-challenge lang-ar hidden">التحدي</span>
+                            <p class="lang-en">Create consistent, professional visual content for the university DSC
+                                chapter's social media and events.</p>
+                            <p class="lang-ar hidden">إنشاء محتوى بصري احترافي ومتسق لوسائل التواصل الاجتماعي والفعاليات
+                                لفصل DSC الجامعي.</p>
+                        </div>
+                    </div>
+                    <div class="exp-tl-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-action">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <div class="exp-tl-connector"></div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-action lang-en">Action</span>
+                            <span class="exp-tl-label lbl-action lang-ar hidden">الإجراء</span>
+                            <p class="lang-en">Designed social media posts, event banners, and promotional materials —
+                                establishing a cohesive visual identity for DSC channels.</p>
+                            <p class="lang-ar hidden">صممت منشورات التواصل الاجتماعي وبانرات الفعاليات والمواد الترويجية
+                                — مُرسياً هوية بصرية متماسكة لقنوات DSC.</p>
+                        </div>
+                    </div>
+                    <div class="exp-tl-row last-row">
+                        <div class="exp-tl-line-wrap">
+                            <div class="exp-tl-dot dot-result">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="exp-tl-content">
+                            <span class="exp-tl-label lbl-result lang-en">Result</span>
+                            <span class="exp-tl-label lbl-result lang-ar hidden">النتيجة</span>
+                            <p class="lang-en">Improved visual consistency across all DSC social media channels and
+                                strengthened the club's online presence and community engagement.</p>
+                            <p class="lang-ar hidden">حسّنت الاتساق البصري عبر جميع قنوات DSC على التواصل الاجتماعي
+                                وعزّزت الحضور الإلكتروني للنادي وتفاعل المجتمع.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-tags">
+                    <span class="exp-tag">Graphic Design</span>
+                    <span class="exp-tag">Social Media</span>
+                    <span class="exp-tag">Visual Identity</span>
+                    <span class="exp-tag">Figma</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-header">
+            <p class="section-label" data-en="WHAT I OFFER" data-ar="ما أقدمه">WHAT I OFFER</p>
+            <h2 class="section-title" data-en="Services" data-ar="الخدمات">Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-brands fa-figma"></i></div>
+                <h3 class="service-title" data-en="UI/UX Design" data-ar="تصميم واجهات المستخدم">UI/UX Design</h3>
+                <p class="service-description lang-en">Creating intuitive and visually stunning user interfaces that
+                    prioritize user experience and drive engagement through thoughtful design decisions.</p>
+                <p class="service-description lang-ar hidden">إنشاء واجهات مستخدم بديهية ومذهلة بصرياً تعطي الأولوية
+                    لتجربة المستخدم وتحفز التفاعل من خلال قرارات تصميم مدروسة.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Figma</span>
+                    <span class="service-tag">User Research</span>
+                    <span class="service-tag">Wireframing</span>
+                    <span class="service-tag">Design Systems</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3 class="service-title" data-en="Mobile App Development" data-ar="تطوير تطبيقات الموبايل">Mobile App
+                    Development</h3>
+                <p class="service-description lang-en">Building high-performance cross-platform mobile applications
+                    using Flutter, delivering native-like experiences for both iOS and Android platforms.</p>
+                <p class="service-description lang-ar hidden">بناء تطبيقات موبايل عالية الأداء متعددة المنصات باستخدام
+                    Flutter، تقديم تجارب تشبه التطبيقات الأصلية لمنصتي iOS و Android.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Flutter</span>
+                    <span class="service-tag">Dart</span>
+                    <span class="service-tag">OOP</span>
+                    <span class="service-tag">Responsive UI</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <h3 class="service-title" data-en="User Research" data-ar="بحث المستخدم">User Research</h3>
+                <p class="service-description lang-en">Conducting competitive analysis, user interviews, and usability
+                    testing to ensure designs are grounded in real user insights and address genuine pain points.</p>
+                <p class="service-description lang-ar hidden">إجراء تحليل تنافسي ومقابلات مستخدمين واختبارات قابلية
+                    الاستخدام لضمان أن التصاميم مبنية على رؤى حقيقية.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Personas</span>
+                    <span class="service-tag">Empathy Maps</span>
+                    <span class="service-tag">User Journeys</span>
+                    <span class="service-tag">Accessibility</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-object-group"></i></div>
+                <h3 class="service-title" data-en="Prototyping & Handoff" data-ar="النماذج الأولية والتسليم">Prototyping
+                    & Handoff</h3>
+                <p class="service-description lang-en">Creating interactive high-fidelity prototypes in Figma and
+                    structuring UI components for seamless developer handoff — bridging design and development.</p>
+                <p class="service-description lang-ar hidden">إنشاء نماذج أولية تفاعلية عالية الدقة في Figma وهيكلة
+                    مكونات UI لتسليم سلس للمطورين — الجسر بين التصميم والتطوير.</p>
+                <div class="service-tags">
+                    <span class="service-tag">High-Fidelity</span>
+                    <span class="service-tag">Figma</span>
+                    <span class="service-tag">Flutter Handoff</span>
+                    <span class="service-tag">Component Specs</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3 class="service-title" data-en="Graphic Design" data-ar="التصميم الجرافيكي">Graphic Design</h3>
+                <p class="service-description lang-en">Creating visually compelling graphics, brand assets, and
+                    print-ready materials using industry-standard tools to communicate ideas with clarity and aesthetic
+                    impact.</p>
+                <p class="service-description lang-ar hidden">إنشاء رسومات جذابة بصرياً وأصول العلامة التجارية ومواد
+                    جاهزة للطباعة باستخدام أدوات احترافية لإيصال الأفكار بوضوح وتأثير بصري.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Photoshop</span>
+                    <span class="service-tag">Illustrator</span>
+                    <span class="service-tag">Brand Identity</span>
+                    <span class="service-tag">Poster Design</span>
+                    <span class="service-tag">Print Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View Pricing Button -->
+    <div style="text-align:center; margin-top: 60px;">
+        <a href="card.html" class="btn btn-primary" style="font-size:15px; padding: 16px 44px;">
+            <i class="fa-solid fa-tags"></i>
+            <span data-en="View Pricing Plans" data-ar="عرض خطط الأسعار">View Pricing Plans</span>
+        </a>
+    </div>
+    </section>
+    
+    <!-- ── Graphic Design Portfolio Banner ── -->
+<div style="text-align:center; margin-top: 40px; padding: 0 20px;">
+  <a href="Graphics/graphics.html" class="graphic-cta-band">
+    <div class="graphic-cta-inner">
+      <div class="graphic-cta-left">
+        <span class="graphic-cta-label">GRAPHIC DESIGN</span>
+        <h3 class="graphic-cta-title">
+          See My <span class="graphic-cta-accent">Design Gallery</span>
+        </h3>
+        <p class="graphic-cta-sub" data-en="Posters, brand identity, social media — crafted in Photoshop & Illustrator" data-ar="ملصقات، هوية بصرية، سوشيال ميديا — مصنوعة بـ Photoshop & Illustrator">
+          Posters, brand identity, social media — crafted in Photoshop &amp; Illustrator
+        </p>
+      </div>
+      <div class="graphic-cta-right">
+        <div class="graphic-cta-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" alt="Illustrator">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">
+        </div>
+        <span class="graphic-cta-arrow">
+          View Gallery <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+    </div>
+  </a>
+</div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <p class="section-label" data-en="FEATURED WORK" data-ar="أعمال مميزة">FEATURED WORK</p>
+            <h2 class="section-title" data-en="Projects Portfolio" data-ar="معرض المشاريع">Projects</h2>
+            <p class="section-subtitle lang-en">Showcasing real-world projects that combine design thinking with
+                technical execution</p>
+            <p class="section-subtitle lang-ar hidden">عرض مشاريع حقيقية تجمع بين التفكير التصميمي والتنفيذ التقني</p>
+        </div>
+        <div class="projects-grid">
+
+            <!-- NABD Project -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="assets/Nabd.webp" alt="NABD Healthcare App" class="project-image" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="https://www.linkedin.com/posts/kyrillos-bassem-aya_uxdesign-uidesign-casestudy-activity-7382107744213909504-CPNk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbUjSsBUSHOlD2HhhqQSDy9_3LRCfemK-8"
+                            class="overlay-btn" title="View Case Study"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/gallery/236264361/NABD-UX-Case-Study" class="overlay-btn"
+                            title="View on Behance" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-badge lang-en">UI/UX Case Study</span>
+                    <span class="project-badge lang-ar hidden">دراسة حالة UI/UX</span>
+                    <h3 class="project-title" data-en="NABD – Healthcare Mobile App"
+                        data-ar="نبض – تطبيق الرعاية الصحية">NABD – Healthcare Mobile App</h3>
+                    <div class="project-car">
+                        <div class="project-car-item">
+                            <strong class="lang-en">Challenge</strong>
+                            <strong class="lang-ar hidden">التحدي</strong>
+                            <p class="lang-en">Identify critical pain points in healthcare accessibility and emergency
+                                medical response through research.</p>
+                            <p class="lang-ar hidden">تحديد نقاط الألم الرئيسية في إمكانية الوصول إلى الرعاية الصحية
+                                والاستجابة الطبية للطوارئ من خلال البحث.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Action</strong>
+                            <strong class="lang-ar hidden">الإجراء</strong>
+                            <p class="lang-en">Conducted competitive analysis, user interviews, built personas, empathy
+                                maps, and navigation flows — then designed a comprehensive design system and interactive
+                                Figma prototype.</p>
+                            <p class="lang-ar hidden">أجريت تحليلاً تنافسياً ومقابلات مع المستخدمين وبنيت الشخصيات
+                                وخرائط التعاطف وتدفقات التنقل، ثم صممت نظام تصميم شامل ونموذجاً أولياً تفاعلياً في
+                                Figma.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Result</strong>
+                            <strong class="lang-ar hidden">النتيجة</strong>
+                            <p class="lang-en">Delivered a fully interactive high-fidelity mobile prototype structured
+                                for seamless Flutter developer handoff.</p>
+                            <p class="lang-ar hidden">سلّمت نموذجاً أولياً تفاعلياً عالي الدقة للهاتف المحمول منظّماً
+                                لتسليم سلس لمطوري Flutter.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Figma</span>
+                        <span class="project-tag">UI/UX Design</span>
+                        <span class="project-tag">User Research</span>
+                        <span class="project-tag">Prototyping</span>
+                        <span class="project-tag">Design System</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VORTEX Project -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="assets/Per.webp" alt="VORTEX Premium Car Marketplace App" loading="lazy" class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://www.linkedin.com/posts/kyrillos-bassem-aya_uidesign-uxdesign-mobileappdesign-activity-7435017289768476672-qReT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbUjSsBUSHOlD2HhhqQSDy9_3LRCfemK-8"
+                            class="overlay-btn" title="View Case Study"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/gallery/245203487/Vortex-Premium-Car-Marketplace-Experience"
+                            class="overlay-btn" title="View on Behance" target="_blank"><i
+                                class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-badge lang-en">UI/UX Case Study</span>
+                    <span class="project-badge lang-ar hidden">دراسة حالة UI/UX</span>
+                    <h3 class="project-title" data-en="VORTEX – Premium Car Marketplace Mobile App"
+                        data-ar="فورتكس – تطبيق سوق السيارات الفاخرة">VORTEX – Premium Car Marketplace Mobile App</h3>
+                    <div class="project-car">
+                        <div class="project-car-item">
+                            <strong class="lang-en">Challenge</strong>
+                            <strong class="lang-ar hidden">التحدي</strong>
+                            <p class="lang-en">Design a high-performance mobile experience for buying, renting, and
+                                selling luxury cars while maintaining a premium brand feel and minimizing friction in
+                                complex flows like filtering, listing, and checkout.</p>
+                            <p class="lang-ar hidden">تصميم تجربة موبايل عالية الأداء لشراء وتأجير وبيع السيارات الفاخرة
+                                مع الحفاظ على طابع علامة تجارية راقية وتقليل الاحتكاك في التدفقات المعقدة كالتصفية
+                                والإدراج والدفع.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Action</strong>
+                            <strong class="lang-ar hidden">الإجراء</strong>
+                            <p class="lang-en">Conducted competitive analysis of automotive marketplaces, defined user
+                                flows, built personas and journey maps, structured information architecture, and created
+                                a scalable design system — then developed a fully interactive high-fidelity prototype in
+                                Figma.</p>
+                            <p class="lang-ar hidden">أجريت تحليلاً تنافسياً لأسواق السيارات وحددت تدفقات المستخدمين
+                                وبنيت الشخصيات وخرائط الرحلة وهيكلت معمارية المعلومات وأنشأت نظام تصميم قابل للتوسع، ثم
+                                طورت نموذجاً أولياً تفاعلياً عالي الدقة في Figma.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Result</strong>
+                            <strong class="lang-ar hidden">النتيجة</strong>
+                            <p class="lang-en">Delivered a polished, performance-driven mobile prototype optimized for
+                                seamless developer handoff and scalable product growth, combining bold visual identity
+                                with intuitive UX.</p>
+                            <p class="lang-ar hidden">سلّمت نموذجاً أولياً احترافياً عالي الأداء للهاتف المحمول
+                                مُحسَّناً لتسليم سلس للمطورين ونمو المنتج، يجمع بين هوية بصرية جريئة وتجربة مستخدم
+                                بديهية.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Figma</span>
+                        <span class="project-tag">UI/UX Design</span>
+                        <span class="project-tag">Mobile App Design</span>
+                        <span class="project-tag">Interaction Design</span>
+                        <span class="project-tag">Design System</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Calculator website -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="assets/clac.webp" alt="Calculator App" loading="lazy" class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://kerobassem.github.io/Calculator/" class="overlay-btn" title="View Live Demo"
+                            target="_blank"><i class="fa-solid fa-eye"></i></a>
+                        <a href="https://github.com/kerobassem/Calculator" class="overlay-btn" title="View on GitHub"
+                            target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-badge lang-en">Frontend Development</span>
+                    <span class="project-badge lang-ar hidden">تطوير الواجهة الأمامية</span>
+                    <h3 class="project-title" data-en="Calculator – Web App" data-ar="آلة حاسبة – تطبيق ويب">Calculator
+                        – Web App</h3>
+                    <div class="project-car">
+                        <div class="project-car-item">
+                            <strong class="lang-en">Challenge</strong>
+                            <strong class="lang-ar hidden">التحدي</strong>
+                            <p class="lang-en">Build a fully functional calculator with a clean UI that handles
+                                arithmetic operations and edge cases reliably.</p>
+                            <p class="lang-ar hidden">بناء آلة حاسبة متكاملة بواجهة مستخدم أنيقة تتعامل مع العمليات
+                                الحسابية والحالات الاستثنائية بشكل موثوق.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Action</strong>
+                            <strong class="lang-ar hidden">الإجراء</strong>
+                            <p class="lang-en">Developed a responsive calculator using HTML, CSS, and vanilla JavaScript
+                                with dynamic expression rendering and keyboard-friendly interactions.</p>
+                            <p class="lang-ar hidden">طوّرت آلة حاسبة متجاوبة باستخدام HTML وCSS وJavaScript مع عرض
+                                ديناميكي للتعبيرات وتفاعلات سهلة الاستخدام.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Result</strong>
+                            <strong class="lang-ar hidden">النتيجة</strong>
+                            <p class="lang-en">Delivered a sleek, fully responsive calculator supporting basic and
+                                advanced operations with a smooth user experience.</p>
+                            <p class="lang-ar hidden">سلّمت آلة حاسبة أنيقة ومتجاوبة بالكامل تدعم العمليات الأساسية
+                                والمتقدمة مع تجربة مستخدم سلسة.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio Website -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=700&h=500&fit=crop"
+                        alt="Personal Portfolio" class="project-image" loading="lazy">
+                    <div class="project-overlay">
+                        <a href="#home" class="overlay-btn" title="You're here!"><i class="fa-solid fa-eye"></i></a>
+                        <a href="https://github.com/Kerobassem/Portfolio" class="overlay-btn" title="View on GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-badge lang-en">Front-End Development</span>
+                    <span class="project-badge lang-ar hidden">تطوير واجهات أمامية</span>
+                    <h3 class="project-title" data-en="Personal Portfolio Website" data-ar="موقع المعرض الشخصي">Personal
+                        Portfolio Website</h3>
+                    <div class="project-car">
+                        <div class="project-car-item">
+                            <strong class="lang-en">Challenge</strong>
+                            <strong class="lang-ar hidden">التحدي</strong>
+                            <p class="lang-en">Create a professional bilingual (EN/AR) portfolio that showcases both
+                                design and development skills in one place.</p>
+                            <p class="lang-ar hidden">إنشاء معرض احترافي ثنائي اللغة (عربي/إنجليزي) يعرض مهارات التصميم
+                                والتطوير في مكان واحد.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Action</strong>
+                            <strong class="lang-ar hidden">الإجراء</strong>
+                            <p class="lang-en">Built with HTML, CSS, and JavaScript — featuring particles.js animation,
+                                dark/light theme toggle, smooth scroll, and full RTL Arabic support.</p>
+                            <p class="lang-ar hidden">بُني بـ HTML وCSS وJavaScript — يتضمن رسوم متحركة بـ particles.js،
+                                تبديل المظهر الداكن/الفاتح، التمرير السلس، ودعم اللغة العربية RTL بالكامل.</p>
+                        </div>
+                        <div class="project-car-item">
+                            <strong class="lang-en">Result</strong>
+                            <strong class="lang-ar hidden">النتيجة</strong>
+                            <p class="lang-en">A fully responsive, interactive portfolio site demonstrating front-end
+                                skills and a strong visual identity — the very site you're visiting now.</p>
+                            <p class="lang-ar hidden">موقع معرض تفاعلي متجاوب بالكامل يُظهر مهارات الواجهة الأمامية
+                                وهوية بصرية قوية — الموقع الذي تزوره الآن.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Particles.js</span>
+                        <span class="project-tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="section-header">
+            <p class="section-label" data-en="RECOGNITION" data-ar="التقدير">RECOGNITION</p>
+            <h2 class="section-title" data-en="Achievements & Certifications" data-ar="الإنجازات والشهادات">
+                Certifications</h2>
+        </div>
+        <div class="achievements-grid">
+            <a href="https://www.linkedin.com/posts/kyrillos-bassem_depi-digitalegyptpioneersinitiative-round4-activity-7403478697191583744-200R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbUjSsBUSHOlD2HhhqQSDy9_3LRCfemK-8" target="_blank" class="achievement-link">
+            <div class="achievement-card">
+                <div class="achievement-badge"><i class="fa-solid fa-medal"></i></div>
+                <h3 class="achievement-title" data-en="DEPI Flutter Trainee" data-ar="متدرب فلاتر DEPI">DEPI Flutter
+                    Trainee</h3>
+                <p class="achievement-issuer" data-en="Digital Egypt Pioneers Initiative (DEPI)"
+                    data-ar="مبادرة رواد مصر الرقمية">Digital Egypt Pioneers Initiative</p>
+                <p class="achievement-date" data-en="Dec 2025 – Present" data-ar="ديسمبر 2025 – حتى الآن">Dec 2025 –
+                    Present</p>
+            </div>
+        </a>
+            <a href="https://drive.google.com/file/d/1k9NkCVAuD_XCisPpcubL207wqSIiIWMi/view?usp=drive_link" target="_blank" class="achievement-link">
+            <div class="achievement-card">
+                <div class="achievement-badge"><i class="fa-solid fa-pen-ruler"></i></div>
+                <h3 class="achievement-title" data-en="UI/UX Design Certificate — 92%"
+                    data-ar="شهادة تصميم UI/UX — 92%">UI/UX Design Certificate</h3>
+                <p class="achievement-issuer" data-en="ITIDA / National Telecommunications Institute (NTI)"
+                    data-ar="إيتيدا / المعهد القومي للاتصالات (NTI)">ITIDA / NTI</p>
+                <p class="achievement-date" data-en="September 2025" data-ar="سبتمبر 2025">September 2025</p>
+            </div>
+        </a>
+            <a href="https://drive.google.com/file/d/1Y4Jb9haQbfcGJ-qv22DZ1cujgGxpo_DZ/view?usp=drive_link" target="_blank" class="achievement-link">
+            <div class="achievement-card">
+                <div class="achievement-badge"><i class="fa-brands fa-microsoft"></i></div>
+                <h3 class="achievement-title" data-en="Sprints × Microsoft Summer Camp"
+                    data-ar="معسكر سبرينتس × مايكروسوفت">Sprints × Microsoft Summer Camp</h3>
+                <p class="achievement-issuer" data-en="UI/UX Design — 40-hour Program"
+                    data-ar="تصميم UI/UX — برنامج 40 ساعة">UI/UX Design — 40-hour Program</p>
+                <p class="achievement-date" data-en="August 2025" data-ar="أغسطس 2025">August 2025</p>
+            </div>
+        </a>
+            <div class="achievement-card">
+                <div class="achievement-badge"><i class="fa-brands fa-google"></i></div>
+                <h3 class="achievement-title" data-en="DSC Graphic Designer" data-ar="مصمم جرافيك DSC">DSC Graphic
+                    Designer</h3>
+                <p class="achievement-issuer" data-en="Google Developer Student Clubs" data-ar="نوادي طلاب مطوري جوجل">
+                    Google Developer Student Clubs</p>
+                <p class="achievement-date" data-en="Feb 2025 – Present" data-ar="فبراير 2025 – حتى الآن">Feb 2025 –
+                    Present</p>
+            </div>
+        </div>
+    </section>
+    <!-- =============================================
+     TESTIMONIALS — COMING SOON
+     Paste into index.html before Contact section
+     Requires: Font Awesome already loaded
+================================================ -->
+
+<section id="testimonials">
+    <div class="section-header">
+        <p class="section-label" data-en="WHAT PEOPLE SAY" data-ar="ما يقوله الناس">WHAT PEOPLE SAY</p>
+        <h2 class="section-title" data-en="Client Reviews" data-ar="تقييمات العملاء">Client Reviews</h2>
+    </div>
+
+    <div class="testi-soon-wrapper">
+
+        <div class="testi-soon-icon">
+            <i class="fa-regular fa-comments"></i>
+        </div>
+
+        <h3 class="testi-soon-title lang-en">Real reviews coming soon</h3>
+        <h3 class="testi-soon-title lang-ar hidden">تقييمات حقيقية قريباً</h3>
+
+        <p class="testi-soon-sub lang-en">I'm currently collecting feedback from people I've worked with.<br>Check back soon — honest words from real collaborators.</p>
+        <p class="testi-soon-sub lang-ar hidden">أنا حالياً أجمع آراء الأشخاص الذين تعاملت معهم.<br>عد قريباً — كلمات حقيقية من متعاونين حقيقيين.</p>
+
+        <div class="testi-soon-stars">
+            <div class="testi-soon-row">
+                <div class="testi-soon-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="testi-soon-lines">
+                    <div class="testi-shimmer testi-shimmer-long"></div>
+                    <div class="testi-shimmer testi-shimmer-short"></div>
+                </div>
+            </div>
+            <div class="testi-soon-row">
+                <div class="testi-soon-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="testi-soon-lines">
+                    <div class="testi-shimmer testi-shimmer-med"></div>
+                    <div class="testi-shimmer testi-shimmer-short"></div>
+                </div>
+            </div>
+            <div class="testi-soon-row">
+                <div class="testi-soon-avatar"><i class="fa-solid fa-user"></i></div>
+                <div class="testi-soon-lines">
+                    <div class="testi-shimmer testi-shimmer-long"></div>
+                    <div class="testi-shimmer testi-shimmer-short"></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/kyrillos-bassem/" target="_blank" class="testi-soon-cta">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span class="lang-en">Leave a review on LinkedIn</span>
+            <span class="lang-ar hidden">اترك تقييماً على LinkedIn</span>
+        </a>
+
+    </div>
+</section>
+
+    <!-- =============================================
+     TESTIMONIALS SECTION — paste into index.html
+     Requires: Font Awesome icons already loaded
+================================================ -->
+
+<!-- <section id="testimonials">
+    <div class="section-header">
+        <p class="section-label" data-en="WHAT PEOPLE SAY" data-ar="ما يقوله الناس">WHAT PEOPLE SAY</p>
+        <h2 class="section-title" data-en="Client Reviews" data-ar="تقييمات العملاء">Client Reviews</h2>
+        <p class="section-subtitle lang-en">Feedback from people I've collaborated with</p>
+        <p class="section-subtitle lang-ar hidden">آراء الأشخاص الذين تعاملت معهم</p>
+    </div>
+
+    <div class="testimonials-track-wrapper">
+        <div class="testimonials-track"> -->
+
+            <!-- Card 1 -->
+            <!-- <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"Kyrillos delivered a stunning Figma prototype for our healthcare app. His attention to user flow and visual consistency was exceptional — felt like working with a senior designer."</p>
+                <p class="testi-quote lang-ar hidden">"قدّم كيرلس نموذجاً أولياً مذهلاً في Figma لتطبيقنا الصحي. كان اهتمامه بتدفق المستخدم والاتساق البصري استثنائياً — شعرت كأنني أعمل مع مصمم متمرس."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Ahmed Mostafa</h4>
+                        <h4 class="lang-ar hidden">أحمد مصطفى</h4>
+                        <span class="lang-en">Product Manager · Cairo</span>
+                        <span class="lang-ar hidden">مدير منتج · القاهرة</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 2 -->
+            <!-- <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"The social media designs Kyrillos created for our DSC chapter were clean, on-brand, and always delivered on time. He understood the brief instantly."</p>
+                <p class="testi-quote lang-ar hidden">"التصميمات التي صنعها كيرلس لفصل DSC كانت نظيفة ومتسقة مع هويتنا، وسُلِّمت في الموعد دائماً. فهم المطلوب منذ اللحظة الأولى."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Sara Khalil</h4>
+                        <h4 class="lang-ar hidden">سارة خليل</h4>
+                        <span class="lang-en">DSC Lead · Akhbar Alyoum Academy</span>
+                        <span class="lang-ar hidden">قائدة DSC · أكاديمية أخبار اليوم</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 3 -->
+            <!-- <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="testi-quote lang-en">"Very detail-oriented and communicative throughout the project. Kyrillos took feedback well and iterated quickly. Would definitely collaborate again."</p>
+                <p class="testi-quote lang-ar hidden">"كيرلس منتبه للتفاصيل ومتواصل طوال المشروع. تقبّل الملاحظات بشكل ممتاز وتكيّف بسرعة. سأتعاون معه مجدداً بلا تردد."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Omar Fathy</h4>
+                        <h4 class="lang-ar hidden">عمر فتحي</h4>
+                        <span class="lang-en">Flutter Developer · DEPI</span>
+                        <span class="lang-ar hidden">مطور Flutter · DEPI</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 4 -->
+            <!-- <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"Kyrillos has a rare ability to bridge design and development thinking. His portfolio itself is proof — every section has purpose and polish."</p>
+                <p class="testi-quote lang-ar hidden">"كيرلس يمتلك قدرة نادرة على الجمع بين تفكير التصميم والتطوير. معرض أعماله نفسه دليل على ذلك — كل قسم له هدف ولمسة احترافية."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Nour Hassan</h4>
+                        <h4 class="lang-ar hidden">نور حسن</h4>
+                        <span class="lang-en">UI/UX Instructor · NTI</span>
+                        <span class="lang-ar hidden">مدربة UI/UX · NTI</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 5 -->
+            <!-- <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"Asked Kyrillos to design our startup's onboarding screens. He came back with something far better than what I imagined. Fast, creative, and professional."</p>
+                <p class="testi-quote lang-ar hidden">"طلبت من كيرلس تصميم شاشات الإعداد لشركتنا الناشئة. عاد بشيء أفضل بكثير مما تخيّلته. سريع ومبدع واحترافي."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Youssef Adel</h4>
+                        <h4 class="lang-ar hidden">يوسف عادل</h4>
+                        <span class="lang-en">Startup Founder · Cairo</span>
+                        <span class="lang-ar hidden">مؤسس شركة ناشئة · القاهرة</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- =============================================
+                 DUPLICATE CARDS BELOW — needed for seamless
+                 infinite loop. Do NOT remove them.
+            ================================================ -->
+<!-- 
+            <div class="testi-card" aria-hidden="true">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"Kyrillos delivered a stunning Figma prototype for our healthcare app. His attention to user flow and visual consistency was exceptional — felt like working with a senior designer."</p>
+                <p class="testi-quote lang-ar hidden">"قدّم كيرلس نموذجاً أولياً مذهلاً في Figma لتطبيقنا الصحي. كان اهتمامه بتدفق المستخدم والاتساق البصري استثنائياً."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Ahmed Mostafa</h4>
+                        <h4 class="lang-ar hidden">أحمد مصطفى</h4>
+                        <span class="lang-en">Product Manager · Cairo</span>
+                        <span class="lang-ar hidden">مدير منتج · القاهرة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card" aria-hidden="true">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote lang-en">"The social media designs Kyrillos created for our DSC chapter were clean, on-brand, and always delivered on time."</p>
+                <p class="testi-quote lang-ar hidden">"التصميمات التي صنعها كيرلس لفصل DSC كانت نظيفة ومتسقة مع هويتنا، وسُلِّمت في الموعد دائماً."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Sara Khalil</h4>
+                        <h4 class="lang-ar hidden">سارة خليل</h4>
+                        <span class="lang-en">DSC Lead · Akhbar Alyoum Academy</span>
+                        <span class="lang-ar hidden">قائدة DSC · أكاديمية أخبار اليوم</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card" aria-hidden="true">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="testi-quote lang-en">"Very detail-oriented and communicative throughout the project. Kyrillos took feedback well and iterated quickly."</p>
+                <p class="testi-quote lang-ar hidden">"كيرلس منتبه للتفاصيل ومتواصل طوال المشروع. تقبّل الملاحظات بشكل ممتاز وتكيّف بسرعة."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="testi-info">
+                        <h4 class="lang-en">Omar Fathy</h4>
+                        <h4 class="lang-ar hidden">عمر فتحي</h4>
+                        <span class="lang-en">Flutter Developer · DEPI</span>
+                        <span class="lang-ar hidden">مطور Flutter · DEPI</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div><!-- end .testimonials-track --></div>
+    <!-- end .testimonials-track-wrapper -->
+
+    <!-- <p class="testi-hint lang-en">Hover over a card to pause</p>
+    <p class="testi-hint lang-ar hidden">مرر الماوس فوق البطاقة للإيقاف المؤقت</p> -->
+
+<!-- </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <p class="section-label" data-en="GET IN TOUCH" data-ar="تواصل معي">GET IN TOUCH</p>
+            <h2 class="section-title" data-en="CONTACT ME" data-ar="تواصل معي">CONTACT ME</h2>
+        </div>
+
+        <div class="contact-new-layout">
+
+            <!-- Left: info cards -->
+            <div class="contact-cards-col">
+
+                <a href="https://wa.me/201212349629" target="_blank" class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4 data-en="WhatsApp / Phone" data-ar="واتساب / هاتف">WhatsApp / Phone</h4>
+                        <span>+20 121 234 9629</span>
+                    </div>
+                </a>
+
+                <a href="mailto:kerobassm@gmail.com" class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                        <span>kerobassm@gmail.com</span>
+                    </div>
+                </a>
+                <div class="contact-info-card no-link">
+                    <div class="contact-info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4 data-en="Location" data-ar="الموقع">Location</h4>
+                        <span data-en="Cairo, Egypt" data-ar="القاهرة، مصر">Cairo, Egypt</span>
+                    </div>
+                </div>
+                <!-- Instagram Button -->
+                <a href="https://www.instagram.com/poster_g0old/" target="_blank" class="ig-btn">
+                    <span class="ig-btn-bg"></span>
+                    <img src="assets/poster.webp" loading="lazy"  alt="Instagram Poster Account">
+                    <span class="ig-btn-text">poster_g0old</span>
+                    <span class="ig-btn-glow"></span>
+                </a>
+
+            </div>
+
+            <!-- Right: form -->
+            <div class="contact-form-col">
+                <form id="contactForm">
+                    <div class="contact-field">
+                        <input type="text" id="from_name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="contact-field">
+                        <input type="email" id="from_email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="contact-field">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-send-btn">
+                        <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="footer-new-inner">
+            <h2 class="footer-tagline" data-en="Your Vision, My Design" data-ar="رؤيتك، تصميمي">Your Vision, My Design
+            </h2>
+            <p class="footer-sub lang-en">Feel free to reach out — I'd love to bring your ideas to life.</p>
+            <p class="footer-sub lang-ar hidden">لا تتردد في التواصل — أحب أن أحيل أفكارك إلى واقع.</p>
+
+            <div class="footer-socials">
+                <a href="https://github.com/Kerobassem" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/kyrillos-bassem/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/kir0o_bassem/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/201212349629" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <p class="footer-copy">© 2026 Kyrillos Bassem. <span data-en="All rights reserved."
+                    data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+        </div>
+
+        <!-- Floating Download CV -->
+        <a href="https://drive.google.com/file/d/1MWprzfyWj8at-bIBd_EQUAuOAil2k-ZY/view?usp=drive_link"
+            class="footer-cv-btn" target="_blank">
+            <span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span>
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Language Switching
+        let currentLang = 'en';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const body = document.body;
+            body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.documentElement.lang = lang; // ✅ so type() reads correct word list
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'en');
+            });
+            document.querySelectorAll('.lang-ar').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'ar');
+            });
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (el.id === 'animated-word') return; // ✅ skip typewriter span
+                const text = el.getAttribute(`data-${lang}`);
+                if (text && !el.querySelector('input') && !el.querySelector('textarea')) {
+                    el.textContent = text;
+                }
+            });
+
+            // ✅ Reset typewriter
+            wordIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+            clearTimeout(typeTimer);
+            document.getElementById('animated-word').textContent = '';
+            typeTimer = setTimeout(type, 400);
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Mobile Navigation
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .skill-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
