@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kyrillos Bassem | UI/UX Designer & Graphic Designer</title>
+
+  <meta name="description"
+    content="Meet Kyrillos Bassem, an Egyptian UI/UX Designer and Graphic Designer based in Cairo. Explore his portfolio, design projects, and creative work.">
+
+  <meta name="author" content="Kyrillos Bassem">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical"
+    href="https://kerobassem.github.io/Portfolio/about.html">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title"
+    content="Kyrillos Bassem | UI/UX Designer">
+  <meta property="og:description"
+    content="Explore the portfolio and design work of Kyrillos Bassem.">
+  <meta property="og:url"
+    content="https://kerobassem.github.io/Portfolio/about.html">
+
+  <meta name="theme-color" content="#10111a">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kyrillos Bassem",
+    "alternateName": "كيرلس باسم",
+    "url": "https://kerobassem.github.io/Portfolio/about.html",
+    "mainEntityOfPage": "https://kerobassem.github.io/Portfolio/about.html",
+    "jobTitle": [
+      "UI/UX Designer",
+      "Graphic Designer"
+    ],
+    "description": "Egyptian UI/UX Designer and Graphic Designer based in Cairo, Egypt.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cairo",
+      "addressCountry": "EG"
+    },
+    "knowsAbout": [
+      "UI/UX Design",
+      "User Experience Design",
+      "User Interface Design",
+      "Graphic Design",
+      "Figma",
+      "Adobe Photoshop",
+      "Adobe Illustrator"
+    ],
+    "sameAs": [
+      "https://github.com/Kerobassem"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #10111a;
+      --card: #191b28;
+      --text: #f5f5fa;
+      --muted: #b3b6c9;
+      --accent: #8b7cff;
+      --border: rgba(255,255,255,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(100% - 36px, 1000px);
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .94rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 85px 0 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 15px;
+      margin-bottom: 20px;
+      font-size: .9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 7vw, 4.6rem);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .section {
+      padding: 35px 0;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(22px, 5vw, 40px);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 16px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      padding: 7px 13px;
+      border-radius: 8px;
+      background: rgba(139,124,255,.12);
+      border: 1px solid rgba(139,124,255,.25);
+      font-size: .92rem;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] .skills {
+      justify-content: flex-start;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      padding: 25px 0;
+      font-size: .9rem;
+      margin-top: 35px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 60px;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .panel {
+        border-radius: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        Kyrillos<span>.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Portfolio</a>
+        <a href="#english">About in English</a>
+        <a href="#arabic">من أنا؟</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Designer & Creative Thinker</span>
+
+      <h1>Kyrillos Bassem</h1>
+
+      <p>
+        UI/UX Designer & Graphic Designer based in Cairo, Egypt.
+        Passionate about creating intuitive digital experiences
+        and meaningful visual designs.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="./index.html">
+          Explore My Portfolio
+        </a>
+
+        <a class="btn"
+           href="#arabic">
+          اقرأ بالعربية
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="english" lang="en">
+      <article class="panel">
+        <h2>Who Is Kyrillos Bassem?</h2>
+
+        <p>
+          Kyrillos Bassem is an Egyptian UI/UX Designer and
+          Graphic Designer based in Cairo, Egypt. He is a
+          Computer Science student at Akhbar El-Youm Academy.
+        </p>
+
+        <p>
+          He is interested in designing intuitive digital
+          experiences, creating visually engaging designs,
+          and solving problems through creative thinking
+          and user-centered design.
+        </p>
+
+        <p>
+          His design interests include user interface design,
+          user experience design, graphic design, and visual
+          communication. He uses tools such as Figma,
+          Adobe Photoshop, and Adobe Illustrator in his work.
+        </p>
+
+        <p>
+          Kyrillos continues to develop his skills, explore
+          new design approaches, and build projects that
+          combine creativity with usability.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>Skills & Interests</h2>
+
+        <div class="skills">
+          <span class="skill">UI/UX Design</span>
+          <span class="skill">UI Design</span>
+          <span class="skill">UX Research</span>
+          <span class="skill">Graphic Design</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Adobe Photoshop</span>
+          <span class="skill">Adobe Illustrator</span>
+          <span class="skill">Visual Communication</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="arabic"
+             lang="ar" dir="rtl">
+      <article class="panel">
+        <h2>من هو كيرلس باسم؟</h2>
+
+        <p>
+          كيرلس باسم هو مصمم واجهات وتجارب مستخدم
+          (UI/UX Designer) ومصمم جرافيك مصري، يقيم في
+          القاهرة، مصر. يدرس علوم الحاسب في أكاديمية أخبار اليوم.
+        </p>
+
+        <p>
+          يهتم بتصميم تجارب رقمية سهلة الاستخدام، وإنشاء
+          تصميمات بصرية مميزة، وحل المشكلات من خلال التفكير
+          الإبداعي والتصميم الذي يضع احتياجات المستخدم في المقام الأول.
+        </p>
+
+        <p>
+          تشمل اهتماماته تصميم واجهات المستخدم، وتجربة المستخدم،
+          والتصميم الجرافيكي، والتواصل البصري. ويستخدم أدوات مثل
+          Figma وAdobe Photoshop وAdobe Illustrator في أعماله.
+        </p>
+
+        <p>
+          يواصل كيرلس تطوير مهاراته، واستكشاف أساليب تصميم جديدة،
+          والعمل على مشروعات تجمع بين الإبداع وسهولة الاستخدام.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>المهارات والاهتمامات</h2>
+
+        <div class="skills">
+          <span class="skill">تصميم UI/UX</span>
+          <span class="skill">تصميم واجهات المستخدم</span>
+          <span class="skill">أبحاث تجربة المستخدم</span>
+          <span class="skill">التصميم الجرافيكي</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Photoshop</span>
+          <span class="skill">Illustrator</span>
+          <span class="skill">التواصل البصري</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="panel contact">
+        <h2>Explore My Work | استكشف أعمالي</h2>
+
+        <p>
+          Discover my portfolio, design projects, and creative work.
+          <br>
+          اكتشف معرض أعمالي ومشروعاتي التصميمية وأعمالي الإبداعية.
+        </p>
+
+        <a class="btn btn-primary"
+           href="./index.html">
+          Visit My Portfolio
+        </a>
+
+        <div class="buttons">
+          <a class="btn"
+             href="https://github.com/Kerobassem"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year">2026</span> Kyrillos Bassem.
+      All rights reserved.
+      <br>
+      كيرلس باسم — جميع الحقوق محفوظة.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
